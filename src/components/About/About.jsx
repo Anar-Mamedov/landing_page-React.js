@@ -4,7 +4,12 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const About = () => {
   return (
-    <Grid container justifyContent="center" marginTop="60px">
+    <Grid
+      container
+      marginTop="60px"
+      flexDirection="column"
+      alignContent="center"
+      position="relative">
       <Grid
         container
         maxWidth={1200}
@@ -91,6 +96,23 @@ const About = () => {
           </Button>
         </Grid>
       </Grid>
+      <Box
+        position="absolute"
+        bottom="-50px"
+        width="0"
+        height="0"
+        borderTop="100px solid transparent"
+        borderBottom="100px solid transparent"
+        borderLeft="100px solid #DCFDE4"></Box>
+      <Box
+        position="absolute"
+        right="0"
+        bottom="-50px"
+        width="0"
+        height="0"
+        borderTop="100px solid transparent"
+        borderBottom="100px solid transparent"
+        borderRight="100px solid #BCEEFF"></Box>
     </Grid>
   );
 };
