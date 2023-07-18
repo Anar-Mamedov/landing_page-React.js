@@ -5,7 +5,12 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 const About = () => {
   return (
     <Grid container justifyContent="center" marginTop="60px">
-      <Grid container maxWidth={1200} justifyContent="center" gap="50px">
+      <Grid
+        container
+        maxWidth={1200}
+        justifyContent="center"
+        gap="50px"
+        padding="5px">
         <Grid item xs={12} sm={8}>
           <Typography
             variant="h2"
