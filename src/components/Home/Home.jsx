@@ -92,6 +92,7 @@ const Home = () => {
           xs={12}
           alignItems="center"
           gap={1}
+          padding="5px"
           marginBottom="30px">
           <img height="25px" src={clientsImage} alt="" />
           <Typography component="p" color="#9D9291" fontSize="14px">
