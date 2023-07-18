@@ -101,7 +101,7 @@ const Home = () => {
       </Grid>
       <Box
         width="100%"
-        height="150px"
+        height="200px"
         display="flex"
         position="relative"
         alignItems="center"
