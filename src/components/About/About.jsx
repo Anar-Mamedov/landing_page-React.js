@@ -1,15 +1,17 @@
 import { Grid, Typography, Box, Button } from "@mui/material";
 import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import "./styled.css";
 
 const About = () => {
   return (
     <Grid
+      className="no_margin"
       container
       marginTop="60px"
+      position="relative"
       flexDirection="column"
       alignContent="center"
-      position="relative"
       alignItems="center"
       // border="1px solid #000000"
     >
@@ -28,6 +30,7 @@ const About = () => {
           padding="5px">
           <Grid item xs={12} sm={8}>
             <Typography
+              className="font_size"
               variant="h2"
               component="h2"
               gutterBottom
@@ -151,7 +154,11 @@ const About = () => {
                 marginRight="10px">
                 01
               </Typography>
-              <Box width="400px" height="1px" backgroundColor="#B0B0B0"></Box>
+              <Box
+                className="line"
+                width="400px"
+                height="1px"
+                backgroundColor="#B0B0B0"></Box>
               <Box
                 sx={{
                   width: "30px",
@@ -167,7 +174,7 @@ const About = () => {
                 }}>
                 <ArrowForwardIcon sx={{ color: "#212121" }} />
               </Box>
-              <Grid padding="0px 38px">
+              <Grid className="padding" padding="0px 38px">
                 <Typography
                   component="p"
                   fontFamily="Poppins"
@@ -265,7 +272,11 @@ const About = () => {
                 marginRight="10px">
                 02
               </Typography>
-              <Box width="400px" height="1px" backgroundColor="#B0B0B0"></Box>
+              <Box
+                className="line"
+                width="400px"
+                height="1px"
+                backgroundColor="#B0B0B0"></Box>
               <Box
                 sx={{
                   width: "30px",
@@ -281,7 +292,7 @@ const About = () => {
                 }}>
                 <ArrowForwardIcon sx={{ color: "#212121" }} />
               </Box>
-              <Grid padding="0px 38px">
+              <Grid className="padding" padding="0px 38px">
                 <Typography
                   component="p"
                   fontFamily="Poppins"
@@ -379,7 +390,11 @@ const About = () => {
                 marginRight="10px">
                 03
               </Typography>
-              <Box width="400px" height="1px" backgroundColor="#B0B0B0"></Box>
+              <Box
+                className="line"
+                width="400px"
+                height="1px"
+                backgroundColor="#B0B0B0"></Box>
               <Box
                 sx={{
                   width: "30px",
@@ -395,7 +410,7 @@ const About = () => {
                 }}>
                 <ArrowForwardIcon sx={{ color: "#212121" }} />
               </Box>
-              <Grid padding="0px 38px">
+              <Grid className="padding" padding="0px 38px">
                 <Typography
                   component="p"
                   fontFamily="Poppins"
@@ -483,20 +498,29 @@ const About = () => {
           </Grid>
           <Grid container flexDirection="column" item xs={12} sm={6} gap="40px">
             <Typography
+              className="font_size"
               component="p"
               fontFamily="Poppins"
               fontWeight="700"
               fontSize="36px">
               Solving problems by the{" "}
-              <strong style={{ color: "#33D77D", fontFamily: "Kavoon" }}>
+              <strong
+                className="font__size"
+                style={{
+                  color: "#33D77D",
+                  fontFamily: "Kavoon",
+                  fontWeight: "400",
+                }}>
                 services
               </strong>
             </Typography>
             <Typography
+              className="padding"
               component="p"
               fontFamily="Poppins"
               color="#9D9291"
-              fontSize="24px">
+              paddingRight="150px"
+              fontSize="20px">
               I seek to push the limits of creativity to create high-engaging,
               user-friendly, and memorable interactive experiences.
             </Typography>

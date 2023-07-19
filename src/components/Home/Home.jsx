@@ -3,6 +3,7 @@ import { Typography, Grid, Box, Button } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import mainImage from "../../assets/images/main.svg";
 import clientsImage from "../../assets/images/clinets.svg";
+import "../About/styled.css";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
             alignContent="center"
             padding="5px">
             <Typography
+              className="font_size"
               component="p"
               sx={{ fontSize: "45px", fontFamily: "Poppins" }}>
               HEY! <strong>I’m Elnur,</strong> A{" "}
