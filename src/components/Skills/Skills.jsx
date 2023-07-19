@@ -1,6 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import React from "react";
 import skillsPic from "../../assets/images/skills-pic.svg";
+import "../About/styled.css";
 
 const Skills = () => {
   return (
@@ -50,6 +51,7 @@ const Skills = () => {
             />
           </svg>
           <Typography
+            className="font_size_25px"
             component="p"
             fontFamily="Poppins"
             fontSize="30px"
@@ -58,7 +60,11 @@ const Skills = () => {
           </Typography>
         </Grid>
         <Grid container item xs={12} sm={12}>
-          <Grid item xs={12} sm={6}>
+          <Grid
+            // border="1px solid red"
+            item
+            xs={12}
+            sm={6}>
             <Grid
               container
               alignItems="center"
@@ -327,12 +333,19 @@ const Skills = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid
+            // border="1px solid red"
+            marginTop={7}
+            item
+            xs={12}
+            sm={6}>
             <Grid
+              // border="1px solid green"
               container
               alignItems="center"
               gap="10px"
               justifyContent="center"
+              marginBottom={5}
               item
               xs={12}
               sm={12}>
@@ -364,6 +377,232 @@ const Skills = () => {
                 {" "}
                 Certification
               </Typography>
+            </Grid>
+            <Grid marginBottom={10}>
+              <Grid
+                // border="1px solid black"
+                justifyContent="space-evenly"
+                container
+                item
+                xs={12}
+                sm={12}>
+                <Typography
+                  component="p"
+                  fontFamily="Poppins"
+                  fontSize="20px"
+                  fontWeight="700"
+                  color="#4F4F4F">
+                  UI/UX Designer
+                </Typography>
+                <Typography
+                  component="p"
+                  fontFamily="Poppins"
+                  fontSize="20px"
+                  fontWeight="500"
+                  fontStyle="italic"
+                  color="#828282">
+                  Jan 2018 - Jul 2018{" "}
+                </Typography>
+              </Grid>
+              <Grid
+                className="paddingl-10px"
+                container
+                paddingLeft="85px"
+                item
+                xs={12}
+                sm={12}>
+                <Typography component="p" fontFamily="Poppins" fontSize="16px">
+                  Code Academy
+                </Typography>
+              </Grid>
+            </Grid>
+            <Grid
+              container
+              // border="1px solid black"
+              alignItems="center"
+              item
+              xs={12}
+              sm={12}>
+              <Grid
+                container
+                marginBottom={3}
+                justifyContent="space-around"
+                item
+                xs={12}
+                sm={12}>
+                <Grid item sm={5} display="flex" direction="column">
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="16px"
+                    fontWeight="700"
+                    color="#4F4F4F">
+                    Graphic Design Masterclass
+                  </Typography>
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="14px">
+                    Udemy
+                  </Typography>
+                </Grid>
+                <Grid item sm={2}>
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="16px"
+                    fontWeight="500"
+                    fontStyle="italic"
+                    color="#828282">
+                    Feb 26, 2023
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                marginBottom={3}
+                justifyContent="space-around"
+                item
+                xs={12}
+                sm={12}>
+                <Grid item sm={5} display="flex" direction="column">
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="16px"
+                    fontWeight="700"
+                    color="#4F4F4F">
+                    Principles of UX/UI Design
+                  </Typography>
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="14px">
+                    Meta
+                  </Typography>
+                </Grid>
+                <Grid item sm={2}>
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="16px"
+                    fontWeight="500"
+                    fontStyle="italic"
+                    color="#828282">
+                    Dec 11, 2022
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                marginBottom={3}
+                justifyContent="space-around"
+                item
+                xs={12}
+                sm={12}>
+                <Grid item sm={5} display="flex" direction="column">
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="16px"
+                    fontWeight="700"
+                    color="#4F4F4F">
+                    Figma for UX Design
+                  </Typography>
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="14px">
+                    Linkedin
+                  </Typography>
+                </Grid>
+                <Grid item sm={2}>
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="16px"
+                    fontWeight="500"
+                    fontStyle="italic"
+                    color="#828282">
+                    Oct 2, 2022
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                marginBottom={3}
+                justifyContent="space-around"
+                item
+                xs={12}
+                sm={12}>
+                <Grid
+                  className="max-width"
+                  item
+                  sm={5}
+                  display="flex"
+                  direction="column">
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="16px"
+                    fontWeight="700"
+                    color="#4F4F4F">
+                    Getting Started in User Experience
+                  </Typography>
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="14px">
+                    Linkedin
+                  </Typography>
+                </Grid>
+                <Grid item sm={2}>
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="16px"
+                    fontWeight="500"
+                    fontStyle="italic"
+                    color="#828282">
+                    Oct 22, 2022
+                  </Typography>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                marginBottom={3}
+                justifyContent="space-around"
+                item
+                xs={12}
+                sm={12}>
+                <Grid item sm={5} display="flex" direction="column">
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="16px"
+                    fontWeight="700"
+                    color="#4F4F4F">
+                    Foundations of UX Design
+                  </Typography>
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="14px">
+                    Google
+                  </Typography>
+                </Grid>
+                <Grid item sm={2}>
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="16px"
+                    fontWeight="500"
+                    fontStyle="italic"
+                    color="#828282">
+                    Nov 18, 2022
+                  </Typography>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
