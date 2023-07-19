@@ -54,7 +54,7 @@ const Skills = () => {
             className="font_size_25px"
             component="p"
             fontFamily="Poppins"
-            fontSize="30px"
+            fontSize="36px"
             fontWeight="700">
             Skills & Certification
           </Typography>
@@ -72,7 +72,12 @@ const Skills = () => {
               item
               xs={12}
               sm={12}>
-              <img width="400px" src={skillsPic} alt="" />
+              <img
+                className="image_size"
+                width="400px"
+                src={skillsPic}
+                alt=""
+              />
             </Grid>
             <Grid
               marginTop={7}
