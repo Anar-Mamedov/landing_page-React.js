@@ -11,4 +11,13 @@
   .no_margin {
     margin: 0 !important;
   }
+  .paddingl-10px {
+    padding-left: 10px !important;
+  }
+  .max-width {
+    max-width: 210px !important;
+  }
+  .font_size_25px {
+    font-size: 25px !important;
+  }
 }
