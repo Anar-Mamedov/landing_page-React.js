@@ -20,4 +20,7 @@
   .font_size_25px {
     font-size: 25px !important;
   }
+  .image_size {
+    width: 320px !important;
+  }
 }
