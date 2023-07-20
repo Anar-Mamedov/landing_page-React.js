@@ -1,5 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import React from "react";
+import Carousel from "../Carousel/Carousel";
 
 const References = () => {
   const gradientBackground =
@@ -74,104 +75,7 @@ const References = () => {
           item
           xs={12}
           sm={12}>
-          <Grid
-            item
-            xs={12}
-            sm={5}
-            backgroundColor="#F7FAFC"
-            padding="30px"
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center">
-            <Typography
-              fontFamily="Poppins"
-              fontSize="13px"
-              fontWeight="500"
-              color="rgba(0, 0, 0, 0.48)">
-              ‘’ What sets Elnur apart is his holistic approach to design. He
-              possesses a deep empathy for users, conducting thorough research
-              and user testing to gain insights into their behaviors,
-              preferences, and pain points. This user-centric mindset allows him
-              to create solutions that truly address user needs, ensuring that
-              every interaction is intuitive and enjoyable.
-              <br /> Elnur consistently goes above and beyond in pursuit of
-              excellence. He stays updated on the latest design trends, tools,
-              and technologies, demonstrating a genuine passion for continuous
-              learning and improvement. His enthusiasm, adaptability, and
-              ability to thrive in fast-paced environments make them an asset to
-              any design team’’
-            </Typography>
-            <Typography
-              fontSize="14px"
-              borderRadius="99px"
-              padding="20px"
-              marginTop="20px"
-              height="60px"
-              width="317px"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              textAlign="center"
-              fontFamily="Poppins"
-              fontWeight="700"
-              sx={{
-                backgroundImage: gradientBackground,
-              }}>
-              Ilkina Ganbarova
-              <br /> UX/Visual Designer
-              <br /> Amazon ( AWS )
-            </Typography>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            sm={5}
-            backgroundColor="#F7FAFC"
-            padding="30px"
-            display="flex"
-            flexDirection="column"
-            alignItems="center"
-            justifyContent="center">
-            <Typography
-              fontFamily="Poppins"
-              fontSize="13px"
-              fontWeight="500"
-              color="rgba(0, 0, 0, 0.48)">
-              ‘’ Throughout our collaboration, Elnur has showcased an impressive
-              skill set, including proficiency in industry-standard design
-              software and tools. He has a remarkable ability to effectively
-              communicate and collaborate with cross-functional teams, allowing
-              for seamless integration of design concepts into broader project
-              objectives. Additionally, Elnur consistently meets deadlines and
-              delivers high-quality work under demanding circumstances. Based on
-              Elnur's impressive portfolio and professional demeanor, I have no
-              doubt that he will continue to excel in his career. I
-              wholeheartedly recommend Elnur for any UX/UI and visual design
-              positions or project and believe he would be a valuable asset to
-              any organization’’
-            </Typography>
-            <Typography
-              fontSize="14px"
-              borderRadius="99px"
-              padding="20px"
-              marginTop="20px"
-              height="60px"
-              width="317px"
-              display="flex"
-              alignItems="center"
-              justifyContent="center"
-              textAlign="center"
-              fontFamily="Poppins"
-              fontWeight="700"
-              sx={{
-                backgroundImage: gradientBackground,
-              }}>
-              MIkayil Gasimov
-              <br /> Lead Network Security Engineer
-              <br /> Zoom
-            </Typography>
-          </Grid>
+          <Carousel />
         </Grid>
       </Grid>
     </Grid>
