@@ -63,7 +63,7 @@ const References = () => {
             fontFamily="Poppins"
             fontSize="36px"
             fontWeight="700">
-            Portfolio
+            References
           </Typography>
         </Grid>
         <Grid
