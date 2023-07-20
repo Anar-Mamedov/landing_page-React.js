@@ -84,7 +84,7 @@ const Home = () => {
               height="100%"
               src={mainImage}
               alt=""
-              style={{ maxWidth: "600px", minWidth: "400px" }}
+              style={{ maxWidth: "600px", minWidth: "375px" }}
             />
           </Grid>
         </Grid>
