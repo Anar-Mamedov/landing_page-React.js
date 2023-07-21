@@ -3,8 +3,6 @@ import React from "react";
 import Carousel from "../Carousel/Carousel";
 
 const References = () => {
-  const gradientBackground =
-    "linear-gradient(180deg, rgba(44, 228, 240, 0.36) 25.52%, rgba(3, 237, 144, 0.36) 100%)";
   return (
     <Grid
       container

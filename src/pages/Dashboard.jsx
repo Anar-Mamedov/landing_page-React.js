@@ -5,6 +5,8 @@ import About from "../components/About/About";
 import Skills from "../components/Skills/Skills";
 import Portfolio from "../components/Portfolio/Portfolio";
 import References from "../components/References/References";
+import Contact from "../components/Contact/Contact";
+import Footer from "../components/Footer/Footer";
 
 const Dashboard = () => {
   return (
@@ -15,6 +17,8 @@ const Dashboard = () => {
       <Skills />
       <Portfolio />
       <References />
+      <Contact />
+      <Footer />
     </div>
   );
 };
