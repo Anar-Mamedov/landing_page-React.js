@@ -23,4 +23,14 @@
   .image_size {
     width: 320px !important;
   }
+  .footer {
+    justify-content: center !important;
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .footer_menu {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
 }
