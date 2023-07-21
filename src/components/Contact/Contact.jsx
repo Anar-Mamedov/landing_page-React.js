@@ -2,6 +2,7 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import TextField from "@mui/material/TextField";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import "../About/styled.css";
 
 const Contact = () => {
   return (
@@ -10,7 +11,8 @@ const Contact = () => {
       flexDirection="column"
       alignContent="center"
       alignItems="center"
-      paddingTop="100px">
+      paddingTop="100px"
+      className="paddingl-25px">
       <Grid
         container
         maxWidth={1200}
