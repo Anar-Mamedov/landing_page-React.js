@@ -4,6 +4,11 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./styled.css";
 
 const About = () => {
+  const handleOpenPdf = () => {
+    const pdfUrl = process.env.PUBLIC_URL + "/pdfs/cv_new.pdf";
+    window.open(pdfUrl, "_blank");
+  };
+
   return (
     <Grid
       className="no_margin"
@@ -71,6 +76,7 @@ const About = () => {
           </Grid>
           <Grid>
             <Button
+              onClick={handleOpenPdf}
               variant="contained"
               sx={{
                 padding: "5px 5px 5px 40px",
