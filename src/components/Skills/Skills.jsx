@@ -435,7 +435,12 @@ const Skills = () => {
                 item
                 xs={12}
                 sm={12}>
-                <Grid item sm={5} display="flex" direction="column">
+                <Grid
+                  item
+                  sm={5}
+                  display="flex"
+                  direction="column"
+                  minWidth="232px">
                   <Typography
                     component="p"
                     fontFamily="Poppins"
@@ -451,7 +456,7 @@ const Skills = () => {
                     Udemy
                   </Typography>
                 </Grid>
-                <Grid item sm={2}>
+                <Grid item sm={2} minWidth="95px">
                   <Typography
                     component="p"
                     fontFamily="Poppins"
@@ -470,7 +475,12 @@ const Skills = () => {
                 item
                 xs={12}
                 sm={12}>
-                <Grid item sm={5} display="flex" direction="column">
+                <Grid
+                  item
+                  sm={5}
+                  display="flex"
+                  direction="column"
+                  minWidth="232px">
                   <Typography
                     component="p"
                     fontFamily="Poppins"
@@ -486,7 +496,7 @@ const Skills = () => {
                     Meta
                   </Typography>
                 </Grid>
-                <Grid item sm={2}>
+                <Grid item sm={2} minWidth="95px">
                   <Typography
                     component="p"
                     fontFamily="Poppins"
@@ -505,7 +515,12 @@ const Skills = () => {
                 item
                 xs={12}
                 sm={12}>
-                <Grid item sm={5} display="flex" direction="column">
+                <Grid
+                  item
+                  sm={5}
+                  display="flex"
+                  direction="column"
+                  minWidth="232px">
                   <Typography
                     component="p"
                     fontFamily="Poppins"
@@ -521,7 +536,7 @@ const Skills = () => {
                     Linkedin
                   </Typography>
                 </Grid>
-                <Grid item sm={2}>
+                <Grid item sm={2} minWidth="95px">
                   <Typography
                     component="p"
                     fontFamily="Poppins"
@@ -545,7 +560,8 @@ const Skills = () => {
                   item
                   sm={5}
                   display="flex"
-                  direction="column">
+                  direction="column"
+                  minWidth="232px">
                   <Typography
                     component="p"
                     fontFamily="Poppins"
@@ -561,7 +577,7 @@ const Skills = () => {
                     Linkedin
                   </Typography>
                 </Grid>
-                <Grid item sm={2}>
+                <Grid item sm={2} minWidth="95px">
                   <Typography
                     component="p"
                     fontFamily="Poppins"
@@ -580,7 +596,12 @@ const Skills = () => {
                 item
                 xs={12}
                 sm={12}>
-                <Grid item sm={5} display="flex" direction="column">
+                <Grid
+                  item
+                  sm={5}
+                  display="flex"
+                  direction="column"
+                  minWidth="232px">
                   <Typography
                     component="p"
                     fontFamily="Poppins"
@@ -596,7 +617,7 @@ const Skills = () => {
                     Google
                   </Typography>
                 </Grid>
-                <Grid item sm={2}>
+                <Grid item sm={2} minWidth="95px">
                   <Typography
                     component="p"
                     fontFamily="Poppins"
