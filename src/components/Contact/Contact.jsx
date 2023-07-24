@@ -13,7 +13,7 @@ const Contact = () => {
     const subject = "Contact Form Submission"; // Set your email subject here
     const body = `Name: ${name}\nEmail: ${email}\nProject Detail:\n${note}`; // Compose the email body
 
-    const mailtoLink = `mailto:aliyarovelnur1@gmail.com=${encodeURIComponent(
+    const mailtoLink = `mailto:aliyarovelnur1@gmail.com?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
 
@@ -34,8 +34,7 @@ const Contact = () => {
         justifyContent="space-evenly"
         alignItems="flex-start"
         gap="60px"
-        padding="5px"
-        id="contact">
+        padding="5px">
         <Grid
           item
           xs={12}

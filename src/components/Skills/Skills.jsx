@@ -15,8 +15,7 @@ const Skills = () => {
         maxWidth={1200}
         justifyContent="center"
         gap="10px"
-        padding="5px"
-        id="skills">
+        padding="5px">
         <Grid container alignItems="center" gap="10px" item xs={12} sm={12}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
