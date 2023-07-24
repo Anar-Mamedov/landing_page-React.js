@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -13,10 +13,8 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { createTheme, ThemeProvider } from "@mui/material";
 import "./styled.css";
 
-const pages = ["Home", "About", "Skills", "Portfolio", "References", "Contact"];
-
-const Header = () => {
-  const lastPageIndex = pages.length - 1;
+const Header = ({ sections }) => {
+  const lastPageIndex = sections.length - 1;
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
@@ -26,6 +24,14 @@ const Header = () => {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    handleCloseNavMenu(); // Close the menu after clicking on a menu item
   };
 
   const theme = createTheme({
@@ -54,37 +60,10 @@ const Header = () => {
       <AppBar position="static" sx={{ backgroundColor: "white" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/"
-              sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="23"
-                viewBox="0 0 40 23"
-                fill="none">
-                <path
-                  d="M0.896301 22.8048V0.986572H15.598V4.78984H5.50923V9.9887H14.8416V13.792H5.50923V19.0015H15.6406V22.8048H0.896301Z"
-                  fill="black"
-                />
-                <path
-                  d="M23.0261 22.8048H18.0829L25.6149 0.986572H31.5595L39.0808 22.8048H34.1376L28.6724 5.97237H28.5019L23.0261 22.8048ZM22.7171 14.2288H34.3933V17.8296H22.7171V14.2288Z"
-                  fill="black"
-                />
-              </svg>
-            </Typography>
+            {/* Your logo or website title */}
+            {/* ... */}
 
+            {/* Mobile Menu */}
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
@@ -112,14 +91,17 @@ const Header = () => {
                 sx={{
                   display: { xs: "block", md: "none" },
                 }}>
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="left">{page}</Typography>
+                {sections.map((section) => (
+                  <MenuItem
+                    key={section.id}
+                    onClick={() => scrollToSection(section.id)}>
+                    <Typography textAlign="left">{section.title}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
             </Box>
 
+            {/* Desktop Menu */}
             <Typography
               variant="h5"
               noWrap
@@ -135,21 +117,8 @@ const Header = () => {
                 color: "inherit",
                 textDecoration: "none",
               }}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="40"
-                height="23"
-                viewBox="0 0 40 23"
-                fill="none">
-                <path
-                  d="M0.896301 22.8048V0.986572H15.598V4.78984H5.50923V9.9887H14.8416V13.792H5.50923V19.0015H15.6406V22.8048H0.896301Z"
-                  fill="black"
-                />
-                <path
-                  d="M23.0261 22.8048H18.0829L25.6149 0.986572H31.5595L39.0808 22.8048H34.1376L28.6724 5.97237H28.5019L23.0261 22.8048ZM22.7171 14.2288H34.3933V17.8296H22.7171V14.2288Z"
-                  fill="black"
-                />
-              </svg>
+              {/* Your logo or website title */}
+              {/* ... */}
             </Typography>
             <Box
               sx={{
@@ -157,11 +126,11 @@ const Header = () => {
                 display: { xs: "none", md: "flex" },
                 justifyContent: "flex-end",
               }}>
-              {pages.map((page, index) => (
+              {sections.map((section, index) => (
                 <Button
-                  key={page}
+                  key={section.id}
                   className={index === lastPageIndex ? "last-page" : ""}
-                  onClick={handleCloseNavMenu}
+                  onClick={() => scrollToSection(section.id)}
                   sx={{
                     my: 2,
                     color: "#000000",
@@ -171,8 +140,7 @@ const Header = () => {
                     fontFamily: "Poppins",
                     fontSize: "14px",
                   }}>
-                  {page}
-
+                  {section.title}
                   {index === lastPageIndex && (
                     <Box
                       sx={{
