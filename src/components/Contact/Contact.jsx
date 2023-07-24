@@ -1,24 +1,47 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
-import React from "react";
+import React, { useRef } from "react";
 import TextField from "@mui/material/TextField";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import emailjs from "@emailjs/browser";
 import "../About/styled.css";
 
 const Contact = () => {
-  const handleSendMessage = () => {
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const note = document.getElementById("note").value;
+  const form = useRef();
 
-    const subject = "Contact Form Submission"; // Set your email subject here
-    const body = `Name: ${name}\nEmail: ${email}\nProject Detail:\n${note}`; // Compose the email body
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    const mailtoLink = `mailto:aliyarovelnur1@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailtoLink;
+    emailjs
+      .sendForm(
+        "service_87t1rqc",
+        "template_zhfr7cl",
+        form.current,
+        "NpkqZ3_CqI2jXmgbq"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
+
+  // const handleSendMessage = () => {
+  //   const name = document.getElementById("name").value;
+  //   const email = document.getElementById("email").value;
+  //   const note = document.getElementById("note").value;
+
+  //   const subject = "Contact Form Submission"; // Set your email subject here
+  //   const body = `Name: ${name}\nEmail: ${email}\nProject Detail:\n${note}`; // Compose the email body
+
+  //   const mailtoLink = `mailto:aliyarovelnur1@gmail.com?subject=${encodeURIComponent(
+  //     subject
+  //   )}&body=${encodeURIComponent(body)}`;
+
+  //   window.location.href = mailtoLink;
+  // };
 
   return (
     <Grid
@@ -45,74 +68,98 @@ const Contact = () => {
           flexDirection="column"
           alignItems="center"
           gap="20px">
-          <TextField
-            id="name"
-            label="Your Name"
-            type="text" // Set the type to "text" for name input
-            variant="outlined"
-            fullWidth
-          />
-          <TextField
-            id="email"
-            label="Your Email"
-            type="email"
-            variant="outlined"
-            fullWidth
-          />
-          <TextField
-            id="note"
-            label="Project Detail"
-            multiline // Set the multiline prop to enable multiline input
-            rows={4} // Set the number of rows you want to display
-            variant="outlined"
-            fullWidth
-          />
-          <Button
-            href=""
-            variant="contained"
-            sx={{
-              padding: "5px 5px 5px 40px",
-              color: "#000000",
-              backgroundColor: "#7BDFFE",
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            style={{
               display: "flex",
-              justifyContent: "space-between",
+              flexDirection: "column",
               alignItems: "center",
-              textTransform: "capitalize",
-              fontFamily: "Poppins",
-              fontSize: "14px",
-              borderRadius: "44px",
-              boxShadow: "none",
-              marginTop: "20px",
-              marginBottom: "30px",
-              position: "relative",
-              zIndex: "1",
-              marginRight: "auto",
-              "&:hover": {
-                backgroundColor: "#7BDFFE",
-                boxShadow: "none",
-              },
-            }}
-            onClick={handleSendMessage}
-            ß>
-            <Typography component="p" fontFamily="Poppins" fontWeight="500">
-              Send Message
-            </Typography>
-            <Box
+              width: "100%",
+              gap: "20px",
+            }}>
+            <TextField
+              id="name"
+              label="Your Name"
+              type="text" // Set the type to "text" for name input
+              name="user_name"
+              variant="outlined"
+              fullWidth
+            />
+            <TextField
+              id="email"
+              label="Your Email"
+              type="email"
+              name="user_email"
+              variant="outlined"
+              fullWidth
+            />
+            <TextField
+              id="note"
+              label="Project Detail"
+              name="message"
+              multiline // Set the multiline prop to enable multiline input
+              rows={4} // Set the number of rows you want to display
+              variant="outlined"
+              fullWidth
+            />
+            <Button
+              href=""
+              variant="contained"
+              type="submit"
               sx={{
-                width: "30px",
-                height: "30px",
-                borderRadius: "50%",
-                backgroundColor: "#000000",
+                padding: "5px 5px 5px 40px",
+                color: "#000000",
+                backgroundColor: "#7BDFFE",
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "space-between",
                 alignItems: "center",
-                padding: "5px",
-                marginLeft: "10px",
-                // border: "2px solid white",
+                textTransform: "capitalize",
+                fontFamily: "Poppins",
+                fontSize: "14px",
+                borderRadius: "44px",
+                boxShadow: "none",
+                marginTop: "20px",
+                marginBottom: "30px",
+                position: "relative",
+                zIndex: "1",
+                marginRight: "auto",
+                "&:hover": {
+                  backgroundColor: "#7BDFFE",
+                  boxShadow: "none",
+                },
               }}>
-              <ArrowForwardIcon sx={{ color: "#ffffff" }} />
-            </Box>
-          </Button>
+              <Typography component="p" fontFamily="Poppins" fontWeight="500">
+                Send Message
+              </Typography>
+              <Box
+                sx={{
+                  width: "30px",
+                  height: "30px",
+                  borderRadius: "50%",
+                  backgroundColor: "#000000",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "5px",
+                  marginLeft: "10px",
+                  // border: "2px solid white",
+                }}>
+                <ArrowForwardIcon sx={{ color: "#ffffff" }} />
+              </Box>
+            </Button>
+          </form>
+          {/* <form ref={form} onSubmit={sendEmail}>
+            <input
+              type="text"
+              name="user_name"
+              placeholder="Your Name"
+              style={{ width: "100%" }}
+            />
+            <input type="email" name="user_email" placeholder="Your Email" />
+            <textarea name="message" placeholder="Project Detail" />
+            <input type="submit" value="Send" />
+          </form> */}
         </Grid>
         <Grid
           item
