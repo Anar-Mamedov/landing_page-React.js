@@ -8,7 +8,7 @@ import "../About/styled.css";
 const Home = () => {
   return (
     <Grid container justifyContent="center">
-      <Grid container maxWidth={1200}>
+      <Grid container maxWidth={1200} id="home">
         <Grid container item xs={12} flexWrap="wrap-reverse">
           <Grid
             container

@@ -14,7 +14,8 @@ const References = () => {
         maxWidth={1200}
         justifyContent="center"
         gap="10px"
-        padding="5px">
+        padding="5px"
+        id="references">
         <Grid
           container
           alignItems="center"

@@ -5,6 +5,21 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "../About/styled.css";
 
 const Contact = () => {
+  const handleSendMessage = () => {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const note = document.getElementById("note").value;
+
+    const subject = "Contact Form Submission"; // Set your email subject here
+    const body = `Name: ${name}\nEmail: ${email}\nProject Detail:\n${note}`; // Compose the email body
+
+    const mailtoLink = `mailto:aliyarovelnur1@gmail.com=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+  };
+
   return (
     <Grid
       container
@@ -19,7 +34,8 @@ const Contact = () => {
         justifyContent="space-evenly"
         alignItems="flex-start"
         gap="60px"
-        padding="5px">
+        padding="5px"
+        id="contact">
         <Grid
           item
           xs={12}
@@ -76,7 +92,9 @@ const Contact = () => {
                 backgroundColor: "#7BDFFE",
                 boxShadow: "none",
               },
-            }}>
+            }}
+            onClick={handleSendMessage}
+            ß>
             <Typography component="p" fontFamily="Poppins" fontWeight="500">
               Send Message
             </Typography>

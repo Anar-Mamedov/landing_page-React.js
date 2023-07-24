@@ -21,7 +21,8 @@ const Portfolio = () => {
         maxWidth={1200}
         justifyContent="center"
         gap="10px"
-        padding="5px">
+        padding="5px"
+        id="portfolio">
         <Grid
           container
           alignItems="center"
