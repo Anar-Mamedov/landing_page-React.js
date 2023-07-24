@@ -40,7 +40,7 @@ const Dashboard = () => {
         <Contact />
       </section>
       <section id="footer">
-        <Footer />
+        <Footer sections={sections} />
       </section>
     </div>
   );

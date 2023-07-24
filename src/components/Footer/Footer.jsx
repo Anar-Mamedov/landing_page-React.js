@@ -2,7 +2,14 @@ import { Button, Grid } from "@mui/material";
 import React from "react";
 import "../About/styled.css";
 
-const Footer = () => {
+const Footer = ({ sections }) => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <Grid
       container
@@ -37,41 +44,17 @@ const Footer = () => {
           />
         </svg>
         <Grid className="footer_menu">
-          <Button
-            variant="text"
-            sx={{
-              color: "#000",
-            }}>
-            Home
-          </Button>{" "}
-          <Button
-            variant="text"
-            sx={{
-              color: "#000",
-            }}>
-            About
-          </Button>{" "}
-          <Button
-            variant="text"
-            sx={{
-              color: "#000",
-            }}>
-            Skills
-          </Button>{" "}
-          <Button
-            variant="text"
-            sx={{
-              color: "#000",
-            }}>
-            Portfolio
-          </Button>{" "}
-          <Button
-            variant="text"
-            sx={{
-              color: "#000",
-            }}>
-            References
-          </Button>{" "}
+          {sections.map((section) => (
+            <Button
+              key={section.id}
+              variant="text"
+              sx={{
+                color: "#000",
+              }}
+              onClick={() => scrollToSection(section.id)}>
+              {section.title}
+            </Button>
+          ))}
         </Grid>
       </Grid>
     </Grid>
