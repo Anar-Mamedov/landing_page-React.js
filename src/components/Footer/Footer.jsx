@@ -20,8 +20,7 @@ const Footer = () => {
         gap="10px"
         padding="20px"
         borderTop="1px solid grey"
-        borderBottom="1px solid grey"
-        id="footer">
+        borderBottom="1px solid grey">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"

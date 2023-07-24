@@ -32,8 +32,7 @@ const About = () => {
           maxWidth={1200}
           justifyContent="center"
           gap="50px"
-          padding="5px"
-          id="about">
+          padding="5px">
           <Grid item xs={12} sm={8}>
             <Typography
               className="font_size"
