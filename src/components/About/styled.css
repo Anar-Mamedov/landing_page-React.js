@@ -36,4 +36,7 @@
   .paddingl-25px {
     padding-top: 25px !important;
   }
+  .gap {
+    gap: 20px !important;
+  }
 }

@@ -385,40 +385,46 @@ const Skills = () => {
             </Grid>
             <Grid marginBottom={10}>
               <Grid
-                // border="1px solid black"
-                justifyContent="space-evenly"
+                className="gap"
                 container
+                marginBottom={3}
+                justifyContent="center"
+                // gap="5px"
                 item
                 xs={12}
                 sm={12}>
-                <Typography
-                  component="p"
-                  fontFamily="Poppins"
-                  fontSize="20px"
-                  fontWeight="700"
-                  color="#4F4F4F">
-                  UI/UX Designer
-                </Typography>
-                <Typography
-                  component="p"
-                  fontFamily="Poppins"
-                  fontSize="20px"
-                  fontWeight="500"
-                  fontStyle="italic"
-                  color="#828282">
-                  Jan 2018 - Jul 2018{" "}
-                </Typography>
-              </Grid>
-              <Grid
-                className="paddingl-10px"
-                container
-                paddingLeft="85px"
-                item
-                xs={12}
-                sm={12}>
-                <Typography component="p" fontFamily="Poppins" fontSize="16px">
-                  Code Academy
-                </Typography>
+                <Grid
+                  item
+                  sm={5}
+                  display="flex"
+                  direction="column"
+                  minWidth="160px">
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="20px"
+                    fontWeight="700"
+                    color="#4F4F4F">
+                    UI/UX Designer
+                  </Typography>
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="16px">
+                    Code Academy
+                  </Typography>
+                </Grid>
+                <Grid item sm={2} minWidth="182px">
+                  <Typography
+                    component="p"
+                    fontFamily="Poppins"
+                    fontSize="20px"
+                    fontWeight="500"
+                    fontStyle="italic"
+                    color="#828282">
+                    Jan 2018 - Jul 2018
+                  </Typography>
+                </Grid>
               </Grid>
             </Grid>
             <Grid
