@@ -410,7 +410,8 @@ const Skills = () => {
                   <Typography
                     component="p"
                     fontFamily="Poppins"
-                    fontSize="16px">
+                    fontSize="16px"
+                    marginLeft="1px">
                     Code Academy
                   </Typography>
                 </Grid>
