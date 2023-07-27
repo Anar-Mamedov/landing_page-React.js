@@ -186,7 +186,7 @@ const Contact = () => {
               }}>
               talk{" "}
             </strong>
-            for something speacial
+            for something special
           </Typography>
           <Typography
             component="p"
