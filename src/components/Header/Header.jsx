@@ -116,7 +116,15 @@ const Header = ({ sections }) => {
             )} */}
 
             {/* Mobile Menu */}
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+            <Box
+              sx={{
+                flexGrow: 0,
+                // border: "1px solid red",
+                display: { xs: "flex", md: "none" },
+                width: "50px",
+                height: "50px",
+                // width: "6%",
+              }}>
               <IconButton
                 size="large"
                 aria-label="account of current user"
@@ -160,7 +168,7 @@ const Header = ({ sections }) => {
               component="a"
               href=""
               sx={{
-                mr: 2,
+                // mr: 2,
                 display: { xs: "flex", md: "none" },
                 flexGrow: 1,
                 fontFamily: "monospace",
@@ -168,6 +176,7 @@ const Header = ({ sections }) => {
                 letterSpacing: ".3rem",
                 color: "inherit",
                 textDecoration: "none",
+                justifyContent: "center",
               }}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -187,6 +196,14 @@ const Header = ({ sections }) => {
               {/* Your logo or website title */}
               {/* ... */}
             </Typography>
+            <Box
+              sx={{
+                flexGrow: 0,
+                // border: "1px solid red",
+                display: { xs: "flex", md: "none" },
+                width: "50px",
+                height: "50px",
+              }}></Box>
             <Box
               sx={{
                 flexGrow: 1,
