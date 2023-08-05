@@ -1,5 +1,5 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
-import React, { useRef } from "react";
+import { Box, Button, Grid, Snackbar, Typography } from "@mui/material";
+import React, { useState, useRef } from "react";
 import TextField from "@mui/material/TextField";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import emailjs from "@emailjs/browser";
@@ -7,6 +7,7 @@ import "../About/styled.css";
 
 const Contact = () => {
   const form = useRef();
+  const [message, setMessage] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -21,9 +22,14 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
+          if (result.text === "OK") {
+            setMessage("Message sent successfully!");
+            form.current.reset();
+          }
         },
         (error) => {
           console.log(error.text);
+          setMessage("Message could not be sent. Please try again later.");
         }
       );
   };
@@ -149,6 +155,14 @@ const Contact = () => {
               </Box>
             </Button>
           </form>
+          {message && (
+            <Snackbar
+              open={true}
+              autoHideDuration={3000}
+              onClose={() => setMessage("")}
+              message={message}
+            />
+          )}
           {/* <form ref={form} onSubmit={sendEmail}>
             <input
               type="text"
