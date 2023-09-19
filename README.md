@@ -1,4 +1,4 @@
-https://raw.githubusercontent.com/Anar-Mamedov/landing_page-React.js/master/src/assets/images/ss.png
+<img src="https://raw.githubusercontent.com/Anar-Mamedov/landing_page-React.js/master/src/assets/images/ss.png"/>
 
 # Getting Started with Create React App
 
