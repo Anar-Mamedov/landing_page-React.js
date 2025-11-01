@@ -1,12 +1,36 @@
 import { Grid, Typography, Box, Button } from "@mui/material";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import "./styled.css";
+import { fetchCVFromGoogleDrive } from "../../utils/googleDrive";
 
 const About = () => {
+  const [cvUrl, setCvUrl] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Component mount olduğunda Google Drive'dan CV'yi yükle
+  useEffect(() => {
+    const loadCV = async () => {
+      setIsLoading(true);
+      try {
+        const url = await fetchCVFromGoogleDrive();
+        setCvUrl(url);
+      } catch (error) {
+        console.error("CV yüklenirken hata:", error);
+        // Hata durumunda local CV kullan
+        setCvUrl(process.env.PUBLIC_URL + "/pdfs/cv_new.pdf");
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadCV();
+  }, []);
+
   const handleOpenPdf = () => {
-    const pdfUrl = process.env.PUBLIC_URL + "/pdfs/cv_new.pdf";
-    window.open(pdfUrl, "_blank");
+    if (cvUrl) {
+      window.open(cvUrl, "_blank");
+    }
   };
 
   return (
@@ -77,6 +101,7 @@ const About = () => {
           <Grid>
             <Button
               onClick={handleOpenPdf}
+              disabled={isLoading || !cvUrl}
               variant="contained"
               sx={{
                 padding: "5px 5px 5px 40px",
@@ -98,8 +123,12 @@ const About = () => {
                   backgroundColor: "#7BDFFE",
                   boxShadow: "none",
                 },
+                "&:disabled": {
+                  backgroundColor: "#B0E5F5",
+                  color: "#666666",
+                },
               }}>
-              <strong>See Resume</strong>
+              <strong>{isLoading ? "Loading..." : "See Resume"}</strong>
               <Box
                 sx={{
                   width: "30px",
